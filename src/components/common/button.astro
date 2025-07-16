@@ -1,0 +1,7 @@
+---
+const { text } = Astro.props;
+---
+
+<button class="bg-main hover:bg-main/90 py-2.5 px-10 w-fit text-sm font-medium rounded-full text-white cursor-pointer">
+    {text ? text : 'Get started'}
+</button>

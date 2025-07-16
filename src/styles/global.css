@@ -2,3 +2,8 @@
 
 @import "./components.css";
 @import "./scrollbar.css";
+
+@theme{
+    --color-main: #FF6432;
+    --color-secondary: #0A2B2D;
+}
