@@ -1,0 +1,66 @@
+/* Text */
+.title{
+    @apply text-[38px] leading-[42px] lg:text-[48px] lg:leading-[52px] font-semibold
+}
+
+/* Flex box */
+.center-content{
+    @apply flex justify-center items-center
+}
+
+.row{
+    @apply flex flex-row
+}
+
+.col{
+    @apply flex flex-col
+}
+
+.row-reverse{
+    @apply flex flex-row-reverse
+}
+
+.col-reverse{
+    @apply flex flex-col-reverse
+}
+
+.m-center-mov{
+    @apply mx-auto lg:mx-0
+}
+
+/* Position */
+.absolute-center-x{
+    @apply absolute left-1/2 -translate-x-1/2
+}
+
+.absolute-center-y{
+    @apply absolute top-1/2 -translate-y-1/2
+}
+
+.absolute-center{
+    @apply absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2
+}
+
+/* Otros */
+.br-hidden{
+    @apply hidden md:block
+}
+
+.size-screen{
+    @apply lg:max-w-[1100px] lg:mx-auto px-4 lg:px-0
+}
+
+.padding-auto{
+    @apply py-[50px] 
+}
+
+/* Labels */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
