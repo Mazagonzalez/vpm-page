@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>VPM</title>
+		<ClientRouter transition:persist />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<!-- Font -->
+		<link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+
+		<!-- ScrollReveal CDN  -->
+		<script src="https://unpkg.com/scrollreveal"></script>
+	</head>
+	<body class="scrollbar">
+		<div class="size-full overflow-hidden">
+			<main>
+				<slot />
+		  	</main>
+		</div>
+	</body>
+</html>
+
+<script is:inline>
+	// Scroll to section
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+    // End Scroll to section
+</script>
+
+<style is:global>
+	html {
+	  	background-color: black;
+		color: white;
+	  	scroll-behavior: smooth;
+		font-family: 'Helvetica Neue', sans-serif;
+	}
+	@media(prefers-reduce-motion: reduce){
+	  	html{
+			scroll-behavior: auto;
+	  	}
+	}
+</style>
