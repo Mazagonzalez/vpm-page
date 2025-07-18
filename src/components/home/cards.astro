@@ -23,8 +23,8 @@ const data = [
 
 <section class="size-screen padding-auto">
     <div class="grid grid-cols-3 gap-5">
-        {data.map(( item ) => (
-            <div class={`h-[628px] p-2.5 rounded-4xl ${item.bg} flex`}>
+        {data.map(( item, index ) => (
+            <div class={`h-[628px] p-2.5 rounded-4xl flex ${item.bg} ${index % 2 ? 'into-top-2' : 'into-bottom-2'}`}>
                 <div class="w-full h-[255px] col gap-3 pl-[20px] py-[40px] justify-end rounded-4xl text-white mt-auto backdrop-blur-2xl">
                     <h2 class="text-[32px] leading-[36px] font-bold" set:html={item.title}></h2>
                     <p class="font-medium" set:html={item.description}></p>

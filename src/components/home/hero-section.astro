@@ -5,23 +5,24 @@ import Button from "@/components/common/button.astro";
 <section id="hero" class="size-screen pt-[140px] pb-[50px]">
     <div class="flex flex-col lg:flex-row justify-center items-center gap-4">
         <div class="col gap-8">
-            <h1 class="text-[65px] leading-[70px] font-bold">
+            <h1 class="text-[65px] leading-[70px] font-bold into-left">
                 Avanza al siguiente <br class="br-hidden"> 
                 nivel profesional
             </h1>
     
-            <p class="font-semibold text-[18px] leading-[22px]">
+            <p class="font-semibold text-[18px] leading-[22px] into-left-2">
                 Descubre nuevas oportunidades para crecer, desarrollar tus habilidades <br class="br-hidden">
                 y posicionarte estratégicamente en el camino hacia el éxito.
             </p>
 
-            <Button />
+            <Button className="into-left-3" />
         </div>
 
         <img 
             src="/images/hero-people.png" 
             alt="Peoples" 
             loading="eager"
+            class="into-right-2"
         >
     </div>
 </section>

@@ -1,9 +1,9 @@
 ---
-const { text } = Astro.props;
+const { text, className } = Astro.props;
 ---
 
 <button 
-    class="bg-main hover:bg-main/90 py-2.5 px-10 w-fit text-lg font-bold rounded-full text-white cursor-pointer"
+    class={`bg-main hover:bg-main/90 py-2.5 px-10 w-fit text-lg font-bold rounded-full text-white cursor-pointer ${className}`}
 >
     {text ? text : 'Contacto'}
 </button>
