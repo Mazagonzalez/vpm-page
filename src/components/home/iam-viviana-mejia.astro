@@ -4,23 +4,25 @@ import IconLinkedin from "@/components/icons/icon-linkedin.astro";
 ---
 
 <section>
-    <div class="size-screen padding-auto ">
-        <div class="flex flex-col lg:flex-row lg:items-center rounded-4xl bg-[#162923]">
-            <div class="lg:w-1/2 col gap-[18px] px-[50px] text-white">
+    <div class="size-screen padding-auto">
+        <div class="flex flex-col lg:flex-row lg:items-center rounded-4xl bg-[#162923] py-8 px-6 lg:p-0">
+            <div class="lg:w-1/2 col gap-3 lg:gap-[18px] lg:px-[50px] text-white">
                 <div class="into-left">
                     <IconLogo />
                 </div>
     
-                <h1 class="text-[52px] leading-[56px] font-bold into-left-2">Soy Viviana Mejía</h1>
+                <h1 class="text-[32px] leading-[36px] lg:text-[52px] lg:leading-[56px] font-bold into-left-2">
+                    Soy Viviana Mejía
+                </h1>
     
-                <p class="text-[24px] leading-[36px] font-semibold into-left-3">
+                <p class="lg:text-[24px] lg:leading-[36px] lg:font-semibold into-left-3">
                     Especialista en reclutamiento técnico y de 
                     producto con experiencia en empresas tech 
                     de EE. UU. Te ayudo a encontrar la oferta ideal 
                     y te acompaño en cada etapa del proceso.
                 </p>
     
-                <a href="" target="_blank" class="mt-7 into-left">
+                <a href="" target="_blank" class="lg:mt-7 into-left">
                     <IconLinkedin class="size-[29px] icon" />
                 </a>
             </div>
@@ -29,14 +31,14 @@ import IconLinkedin from "@/components/icons/icon-linkedin.astro";
                 src="/images/viviana-mejia.png" 
                 alt="Viviana Mejía" 
                 loading="lazy"
-                class="lg:w-1/2 into-right"
+                class="lg:w-1/2 rounded-4xl lg:rounded-none into-right mt-8 lg:mt-0"
             >
         </div>
     </div>
 
-    <div class="w-full bg-[url('/images/team-work.png')] bg-no-repeat bg-cover bg-center py-[270px] mt-[70px]">
-        <h1 class="text-[70px] leading-[74px] font-semibold text-white text-center into-bottom-2">
-            El éxito llega a quienes <br>
+    <div class="w-full bg-[url('/images/team-work.png')] bg-no-repeat bg-cover bg-center py-[200px] lg:py-[270px] mt-[30px] lg:mt-[70px]">
+        <h1 class="text-[50px] leading-[54px] lg:text-[70px] lg:leading-[74px] px-4 lg:px-0 font-semibold text-white text-center into-bottom-2">
+            El éxito llega a quienes <br class="br-hidden">
             trabajan para conseguirlo.
         </h1>
     </div>
