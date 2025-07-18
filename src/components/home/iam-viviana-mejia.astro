@@ -1,0 +1,39 @@
+---
+import IconLogo from "@/components/icons/icon-logo.astro";
+import IconLinkedin from "@/components/icons/icon-linkedin.astro";
+---
+
+<section>
+    <div class="size-screen padding-auto flex flex-col lg:flex-row lg:items-center rounded-4xl bg-[#162923]">
+        <div class="lg:w-1/2 col gap-[18px] px-[50px] text-white">
+            <IconLogo />
+
+            <h1 class="text-[52px] leading-[56px] font-bold">Soy Viviana Mejía</h1>
+
+            <p class="text-[24px] leading-[36px] font-semibold">
+                Especialista en reclutamiento técnico y de 
+                producto con experiencia en empresas tech 
+                de EE. UU. Te ayudo a encontrar la oferta ideal 
+                y te acompaño en cada etapa del proceso.
+            </p>
+
+            <a href="" target="_blank" class="mt-7">
+                <IconLinkedin class="size-[29px] fill-white hover:fill-white/90" />
+            </a>
+        </div>
+
+        <img 
+            src="/images/viviana-mejia.png" 
+            alt="Viviana Mejía" 
+            loading="lazy"
+            class="lg:w-1/2"
+        >
+    </div>
+
+    <div class="w-full bg-[url('/images/team-work.png')] bg-no-repeat bg-cover bg-center py-[270px] mt-[70px]">
+        <h1 class="text-[70px] leading-[74px] font-semibold text-white text-center">
+            El éxito llega a quienes <br>
+            trabajan para conseguirlo.
+        </h1>
+    </div>
+</section>
