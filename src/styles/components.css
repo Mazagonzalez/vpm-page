@@ -59,7 +59,7 @@
 }
 
 .button-main{
-    @apply bg-main hover:bg-main/90 py-2.5 px-10 w-fit text-lg font-bold rounded-full text-white cursor-pointer
+    @apply bg-main hover:bg-main/90 py-2.5 px-10 w-fit lg:text-lg font-bold rounded-full text-white cursor-pointer
 }
 
 .btn-nav{
