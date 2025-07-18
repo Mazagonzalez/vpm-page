@@ -58,6 +58,10 @@
     @apply fill-white hover:fill-white/90
 }
 
+.button-main{
+    @apply bg-main hover:bg-main/90 py-2.5 px-10 w-fit text-lg font-bold rounded-full text-white cursor-pointer
+}
+
 .btn-nav{
     @apply p-5 text-[20px] leading-[20px] font-semibold cursor-pointer hover:underline
 }
