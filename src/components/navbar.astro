@@ -3,12 +3,12 @@ import IconVpm from "@/components/icons/icon-vpm.astro";
 ---
 
 <nav id="nav" class="w-full fixed z-50 bg-transparent">
-    <div id="cont" class="size-screen py-8 row justify-between items-center">
+    <div id="cont" class="size-screen py-4 lg:py-8 row justify-between items-center">
         <button onclick="scrollToSection('hero')" class="cursor-pointer">
-            <IconVpm />
+            <IconVpm class="w-[120px] lg:w-[174px]" />
         </button>
 
-        <div>
+        <div class="hidden lg:block">
             <button class="btn-nav">
                 Inicio
             </button>
@@ -57,7 +57,7 @@ import IconVpm from "@/components/icons/icon-vpm.astro";
 
     @keyframes paddingAnimation {
         to {
-            padding: 0px 16px;
+            padding: 4px 16px;
             transition: all 1s;
         }
     }
