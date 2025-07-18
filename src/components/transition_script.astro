@@ -1,4 +1,7 @@
 <script is:inline>
+    var userAgent = navigator.userAgent.toLowerCase();
+    var isMobile = /iphone|ipad|ipod|android|blackberry|iemobile|opera mini/.test(userAgent);
+
     document.addEventListener('DOMContentLoaded', () => {
         ScrollReveal().reveal('.into-center', {
             duration: 1500,
@@ -105,5 +108,23 @@
             delay: 525,
             reset: false
         });
+
+        if (!isMobile) {
+            ScrollReveal().reveal('.into-top-not-mobile', {
+                duration: 2200,
+                origin: 'top',
+                distance: '120px',
+                delay: 470,
+                reset: false
+            });
+
+            ScrollReveal().reveal('.into-bottom-not-mobile', {
+                duration: 2200,
+                origin: 'bottom',
+                distance: '120px',
+                delay: 470,
+                reset: false
+            });
+        }
     })
 </script>
