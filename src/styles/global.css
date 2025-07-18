@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @import "./components.css";
+@import "./font.css";
 @import "./scrollbar.css";
 
 @theme{
