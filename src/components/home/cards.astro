@@ -1,0 +1,35 @@
+---
+const data = [
+    {
+        bg: "bg-[url('/images/team-collaboration.png')]",
+        alt: "Team Collaboration",
+        title: "Forma parte de <br> nuestra red",
+        description: "Nuestro equipo especializado te conecte <br> con las mejores oportunidades",
+    },
+    {
+        bg: "bg-[url('/images/idea-planning.png')]",
+        alt: "Idea Planning",
+        title: "Lo que necesitas para <br> aplicar",
+        description: "Inglés fluido <br> 5 años de experiencia mínima.",
+    },
+    {
+        bg: "bg-[url('/images/woman-reading.png')]",
+        alt: "Woman Reading",
+        title: "Queremos saber <br> más de ti",
+        description: "Queremos conocerte. <br> Adjunta tu hoja de vida",
+    },
+]
+---
+
+<section class="size-screen padding-auto">
+    <div class="grid grid-cols-3 gap-5">
+        {data.map(( item ) => (
+            <div class={`h-[628px] p-2.5 rounded-4xl ${item.bg} flex`}>
+                <div class="w-full h-[255px] col gap-3 pl-[20px] py-[40px] justify-end rounded-4xl text-white mt-auto backdrop-blur-2xl">
+                    <h2 class="text-[32px] leading-[36px] font-bold" set:html={item.title}></h2>
+                    <p class="font-medium" set:html={item.description}></p>
+                </div>
+            </div>  
+        ))}
+    </div>
+</section>
