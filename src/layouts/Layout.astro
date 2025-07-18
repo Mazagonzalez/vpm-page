@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import Footer from "@/components/footer.astro";
+import Navbar from "@/components/navbar.astro";
 ---
 
 <!doctype html>
@@ -24,6 +25,8 @@ import Footer from "@/components/footer.astro";
 	</head>
 	<body class="scrollbar">
 		<div class="size-full overflow-hidden">
+			<Navbar />
+
 			<main>
 				<slot />
 		  	</main>

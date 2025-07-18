@@ -57,3 +57,7 @@
 .icon{
     @apply fill-white hover:fill-white/90
 }
+
+.btn-nav{
+    @apply p-5 text-[20px] leading-[20px] font-semibold cursor-pointer hover:underline
+}

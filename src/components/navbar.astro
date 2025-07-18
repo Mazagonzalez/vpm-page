@@ -1,0 +1,64 @@
+---
+import IconVpm from "@/components/icons/icon-vpm.astro";
+---
+
+<nav id="nav" class="w-full fixed z-50 bg-transparent">
+    <div id="cont" class="size-screen py-8 row justify-between items-center">
+        <button onclick="scrollToSection('hero')" class="cursor-pointer">
+            <IconVpm />
+        </button>
+
+        <div>
+            <button class="btn-nav">
+                Inicio
+            </button>
+
+            <button class="btn-nav">
+                ¿Cómo funciona?
+            </button>
+
+            <button class="btn-nav">
+                Conócenos
+            </button>
+
+            <button class="btn-nav">
+                Requisitos
+            </button>
+
+            <button class="btn-nav">
+                Contacto
+            </button>
+        </div>
+    </div>
+</nav>
+
+<style>
+    #nav{
+        animation: scroller linear both; 
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+    }
+
+    #cont{
+        animation: paddingAnimation linear both; 
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+    }
+
+    @keyframes scroller {
+        to {
+            backdrop-filter: blur(24px);
+            background-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                0 10px 15px -3px rgb(0 0 0 / 0.1), 
+                0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    }
+
+    @keyframes paddingAnimation {
+        to {
+            padding: 0px 16px;
+            transition: all 1s;
+        }
+    }
+</style>
