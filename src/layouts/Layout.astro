@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import Footer from "@/components/footer.astro";
 import Navbar from "@/components/navbar.astro";
+import NavbarMobile from "@/components/navbar-mobile.astro";
 ---
 
 <!doctype html>
@@ -20,10 +21,11 @@ import Navbar from "@/components/navbar.astro";
 		<!-- ScrollReveal CDN  -->
 		<script src="https://unpkg.com/scrollreveal"></script>
 	</head>
-	<body class="scrollbar">
-		<div class="size-full overflow-hidden">
-			<Navbar />
+	<body id="body" class="scrollbar">
+		<Navbar />
+		<NavbarMobile />
 
+		<div class="size-full overflow-hidden">
 			<main>
 				<slot />
 		  	</main>
@@ -34,6 +36,35 @@ import Navbar from "@/components/navbar.astro";
 </html>
 
 <script is:inline>
+	// Open Nav Movile
+    let isOpen = false;
+
+	const body = document.getElementById("body");
+    const bar1 = document.getElementById("bar1");
+    const bar2 = document.getElementById("bar2");
+    const bar3 = document.getElementById("bar3");
+    const content = document.getElementById("body-content");
+
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+        isOpen = !isOpen;
+
+        if (isOpen) {
+			body.classList.add("overflow-hidden");
+            bar1.classList.add("rotate-45", "translate-y-[6px]");
+            bar2.classList.add("scale-0");
+            bar3.classList.add("-rotate-45", "-translate-y-[6px]");
+            content.classList.remove("-translate-y-[500px]");
+        } 
+        else {
+			body.classList.remove("overflow-hidden");
+            bar1.classList.remove("rotate-45", "translate-y-[6px]");
+            bar2.classList.remove("scale-0");
+            bar3.classList.remove("-rotate-45", "-translate-y-[6px]");
+            content.classList.add("-translate-y-[500px]");
+        }
+    });
+	// End Open Nav Movile
+
 	// Scroll to section
     function scrollToSection(sectionId) {
         var section = document.getElementById(sectionId);

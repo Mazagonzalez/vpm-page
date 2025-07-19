@@ -1,0 +1,48 @@
+---
+import IconVpmMobile from "@/components/icons/icon-vpm-mobile.astro";
+import Button from "@/components/common/button.astro";
+---
+
+<nav id="navMobile" class="w-full fixed z-50 bg-transparent lg:hidden">
+    <div class="w-full p-4 row justify-between items-center">
+        <button onclick="scrollToSection('hero')" class="cursor-pointer">
+            <IconVpmMobile class="w-[120px]" />
+        </button>
+
+        <button id="menu-toggle" class="col w-10 h-10 rounded-full center-content bg-main/50 gap-1">
+            <div id="bar1" class="transition-all duration-700 w-5 h-[2.2px] bg-white rounded-full"></div>
+            <div id="bar2" class="transition-all duration-700 w-5 h-[2.2px] bg-white rounded-full"></div>
+            <div id="bar3" class="transition-all duration-700 w-5 h-[2.2px] bg-white rounded-full"></div>
+        </button>
+    </div>
+
+    <div id="body-content" class="z-40 fixed bg-white h-[400px] w-full -translate-y-[500px] transition-all duration-700 px-4 py-8 rounded-b-3xl col">
+        <div class="col">
+            <a onclick="scrollToSection('hero')" class="btn-nav-mobile">Inicio</a>
+            <a class="btn-nav-mobile">¿Cómo funciona?</a>
+            <a class="btn-nav-mobile">Conócenos</a>
+            <a class="btn-nav-mobile">Requisitos</a>
+            <a class="btn-nav-mobile">Contacto</a>
+        </div>
+
+        <Button className="!px-6 !text-sm mt-auto" />
+    </div>
+</nav>
+
+<style>
+    #navMobile{
+        animation: scrollerMob linear both; 
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+    }
+
+    @keyframes scrollerMob {
+        to {
+            backdrop-filter: blur(24px);
+            background-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                0 10px 15px -3px rgb(0 0 0 / 0.1), 
+                0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    }
+</style>

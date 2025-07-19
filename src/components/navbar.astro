@@ -1,15 +1,14 @@
 ---
 import IconVpm from "@/components/icons/icon-vpm.astro";
-import Button from "@/components/common/button.astro";
 ---
 
-<nav id="nav" class="w-full fixed z-50 bg-transparent">
+<nav id="nav" class="w-full fixed z-50 bg-transparent hidden lg:block">
     <div id="cont" class="size-screen py-4 lg:py-8 row justify-between items-center">
         <button onclick="scrollToSection('hero')" class="cursor-pointer">
-            <IconVpm class="w-[120px] lg:w-[174px]" />
+            <IconVpm />
         </button>
 
-        <div class="hidden lg:block">
+        <div>
             <button class="btn-nav">
                 Inicio
             </button>
@@ -30,10 +29,6 @@ import Button from "@/components/common/button.astro";
                 Contacto
             </button>
         </div>
-
-        <button class="button-main !text-sm !px-6 lg:hidden">
-            Contacto
-        </button>
     </div>
 </nav>
 
